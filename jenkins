@@ -30,7 +30,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("sibirp/train-schedule")
+                    app = docker.build("sibirp/jenkins")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
